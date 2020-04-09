@@ -1,0 +1,30 @@
+{
+  "name": "automating-the-build-process-npm",
+  "version": "1.0.0",
+  "description": "A small demonstration on how to automate the build process",
+  "main": "index.js",
+
+  "scripts": {
+    "clean": "rimraf dist/css",
+    "toCSS": "node-sass --output-style expanded --source-map=true src/scss -o dist/css",
+    "toPrefixed": "postcss dist/css/style.css --use=autoprefixer --map=false --output=dist/css/style.css",
+    "toMinified": "cleancss --level=1 --source-map --source-map-inline-sources --output dist/css/style.css dist/css/style.css",
+    "imagemin": "imagemin src/images/* -o dist/images -p",
+    "onDevelopment": "npm run toCSS -- --watch",
+    "build": "npm run clean && npm run toCSS && npm run toPrefixed && npm run toMinified"
+  },
+
+  "browserslist": [
+    "last 4 versions"
+  ],
+
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.7.5",
+    "clean-css-cli": "^4.3.0",
+    "imagemin-cli": "^5.1.0",
+    "node-sass": "^4.13.1",
+    "postcss-cli": "^7.1.0"
+  }
+}
