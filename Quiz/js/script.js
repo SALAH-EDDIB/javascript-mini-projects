@@ -93,15 +93,45 @@ function clearStatuClass(element) {
 }
 
 const questions = [{
-    question: 'What is 2 + 2',
+    question: 'What is the best comedy series',
 
     answer: [{
-        text: '4',
+        text: 'Friends',
         correct: true
     }, {
-        text: '22',
+        text: 'The Office',
         correct: false
     }]
+}, {
+    question: 'What is the best drama serie',
 
+    answer: [{
+        text: 'This Is Us',
+        correct: true
+    }, {
+        text: 'House of Cards',
+        correct: true
+    }, {
+        text: 'Peaky Blinders',
+        correct: true
+    }, {
+        text: 'When They See Us',
+        correct: true
+    }]
+}, {
+    question: 'What is the best action serie',
 
+    answer: [{
+        text: 'Game of Thrones',
+        correct: true
+    }, {
+        text: ' Prison  Break ',
+        correct: false
+    }, {
+        text: 'Vikings',
+        correct: false
+    }, {
+        text: 'Banshee',
+        correct: false
+    }]
 }]
