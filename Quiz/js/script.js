@@ -20,9 +20,9 @@ nextbtn.addEventListener('click', () => {
 function startGame() {
     startbtn.classList.add('hide')
     questionContainer.classList.remove('hide')
-    sheffledQuestion = questions.sort(() => {
+    sheffledQuestion = questions.sort(() =>
         Math.random() - .5
-    })
+    )
     currentQuestionIndex = 0
     setNextQuestion()
 }
