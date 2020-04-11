@@ -54,6 +54,7 @@ function handleClick(e) {
     } else {
         swapTurn()
         boardHover()
+
     }
 
 

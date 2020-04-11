@@ -63,7 +63,7 @@ body {
 .cell.x::before,
 .cell.x::after,
 .cell.circle::before {
-    background-color: black;
+    background-color: rgb(88, 86, 86);
 }
 
 .board.x .cell:not(.x):not(.circle):hover::before,
@@ -80,6 +80,7 @@ body {
     position: absolute;
     width: calc(var(--mark-size) * .15);
     height: var(--mark-size);
+    border-radius: 10px;
 }
 
 .cell.x::before,
@@ -103,14 +104,14 @@ body {
 
 .cell.circle::before,
 .board.circle .cell:not(.x):not(.circle):hover::before {
-    width: var(--mark-size);
-    height: var(--mark-size);
+    width: calc(var(--mark-size) * .9);
+    height: calc(var(--mark-size) * .9);
 }
 
 .cell.circle::after,
 .board.circle .cell:not(.x):not(.circle):hover::after {
-    width: calc(var(--mark-size) * .7);
-    height: calc(var(--mark-size) * .7);
+    width: calc(var(--mark-size) * .65);
+    height: calc(var(--mark-size) * .65);
     background-color: white;
 }
 
