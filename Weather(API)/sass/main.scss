@@ -26,6 +26,10 @@ body {
 
 .temperature {
     flex-direction: column;
+
+    &__description {
+        font-size: 28px;
+    }
 }
 
 .temperature__degreeSection {
@@ -40,6 +44,6 @@ body {
 
     span {
         font-size: 30px;
-        margin-left: 15px;
+        margin-left: 10px;
     }
 }

@@ -35,7 +35,7 @@ window.addEventListener('load', () => {
                 degreeSection.addEventListener('click', () => {
                     if (degreeSpan.textContent === '°C') {
                         degreeSpan.textContent = '°F'
-                        temperatureDegree.textContent = (temp * (9 / 5)) + 32
+                        temperatureDegree.textContent = Math.floor((temp * (9 / 5)) + 32)
                     } else {
                         degreeSpan.textContent = '°C'
                         temperatureDegree.textContent = temp
@@ -46,5 +46,7 @@ window.addEventListener('load', () => {
             })
         })
     }
+
+
 
 })
