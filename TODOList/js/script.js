@@ -21,9 +21,11 @@ filterOption.addEventListener('change', filterTodo)
 
 function addTodo(event) {
 
-    if (todoInput.value === '') return
+
     // prevent form from submitting
     event.preventDefault();
+
+    if (todoInput.value === '') return
     // . todo DIV
     const todoDiv = document.createElement('div')
     todoDiv.classList.add('todo')
