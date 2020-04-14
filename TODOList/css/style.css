@@ -21,11 +21,12 @@ form {
 
 form input,
 form button {
-  padding: 0.5rem;
+  padding: 0.7rem;
   font-size: 2rem;
   border: none;
   background-color: white;
-  outline: none; }
+  outline: none;
+  color: #e97c5e; }
 
 form button {
   color: #e97c5e;
@@ -34,3 +35,92 @@ form button {
   form button:hover {
     background-color: #e97c5e;
     color: white; }
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.todo-list {
+  min-width: 40%;
+  list-style: none; }
+
+.todo {
+  margin: 0.5rem;
+  background-color: white;
+  color: #e97c5e;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all .5s ease; }
+  .todo li {
+    flex: 1; }
+
+.trash-btn,
+.complete-btn {
+  background-color: #FF6F47;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  outline: none; }
+  .trash-btn:hover,
+  .complete-btn:hover {
+    background-color: #ff5223; }
+
+.complete-btn {
+  background-color: #4acc4a; }
+  .complete-btn:hover {
+    background-color: #07bd07; }
+
+.todo-item {
+  padding: 0rem .5rem; }
+
+i,
+path,
+svg {
+  pointer-events: none; }
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6; }
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0; }
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border: none; }
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden; }
+
+select {
+  color: #ff6f47;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1.3rem; }
+
+.select::after {
+  content: "\25bc";
+  color: white;
+  position: absolute;
+  background-color: #ff6f47;
+  top: 0;
+  right: 0;
+  padding: 1.2rem 1rem;
+  z-index: 1;
+  pointer-events: none;
+  transition: all .3s ease; }
+
+.select:hover::after {
+  background-color: white;
+  color: #FF6F47; }
