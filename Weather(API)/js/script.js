@@ -11,18 +11,24 @@ window.addEventListener('load', () => {
 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
+            console.log(position);
 
             long = position.coords.longitude
             lat = position.coords.latitude
             const api = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&appid=40f620c92e459b58039cbcfc3531380b`;
 
             fetch(api).then(Response => {
+                console.log(Response)
+
+
                 return Response.json()
             }).then(data => {
                 console.log(data);
                 const temp = Math.floor(data.current.temp - 273)
                 const sammury = data.current.weather['0'].description
                 const icon = data.current.weather['0'].icon
+
+
 
 
 
@@ -44,6 +50,7 @@ window.addEventListener('load', () => {
                 })
 
             })
+
         })
     }
 
