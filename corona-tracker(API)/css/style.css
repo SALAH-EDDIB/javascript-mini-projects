@@ -16,9 +16,9 @@ header {
     margin-top: 15px;
     font-size: 38px;
     line-height: 150%;
-    color: #36d4c1; }
+    color: #000000; }
     header h1 span {
-      color: #060808; }
+      color: #36d4c1; }
 
 section {
   padding: 0 10%;
@@ -44,3 +44,9 @@ section {
     section div p {
       width: 210px;
       margin-top: 10px; }
+
+select {
+  margin-top: 60px;
+  padding: .4rem;
+  font-size: 26px;
+  outline: none; }

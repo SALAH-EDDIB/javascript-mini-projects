@@ -1,37 +1,43 @@
-window.addEventListener('load', () => {
-    let long;
-    let lat;
-    let temperatureDescription = document.querySelector('.temperature__description')
-    let temperatureDegree = document.querySelector('.degree')
-    let locationTimezone = document.querySelector('.location__timezone')
-    let locationImage = document.querySelector('.location__img')
-    let degreeSection = document.querySelector('.temperature__degreeSection')
-    let degreeSpan = document.querySelector('.temperature__degreeSection span')
+let long;
+let lat;
+let temperatureDescription = document.querySelector('.temperature__description')
+let temperatureDegree = document.querySelector('.degree')
+let locationTimezone = document.querySelector('.location__timezone')
+let locationImage = document.querySelector('.location__img')
+let degreeSection = document.querySelector('.temperature__degreeSection')
+let degreeSpan = document.querySelector('.temperature__degreeSection span')
 
 
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(position => {
-            console.log(position);
 
-            long = position.coords.longitude
-            lat = position.coords.latitude
-            const api = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&appid=40f620c92e459b58039cbcfc3531380b`;
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(position => {
 
-            fetch(api).then(Response => {
-                console.log(Response)
+        console.log(position);
+
+        long = position.coords.longitude
+        lat = position.coords.latitude
+        const api = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&appid=40f620c92e459b58039cbcfc3531380b`;
+
+        fetch(api).then(Response => {
+            return Response.json()
+        }).then(data => {
+
+            console.log(data);
 
 
-                return Response.json()
-            }).then(data => {
-                console.log(data);
+            if (data.cod >= 400) {
+                throw {
+                    status: data.cod,
+                    message: data.message
+                }
+
+
+
+            } else {
+
                 const temp = Math.floor(data.current.temp - 273)
                 const sammury = data.current.weather['0'].description
                 const icon = data.current.weather['0'].icon
-
-
-
-
-
 
                 temperatureDegree.textContent = temp
                 temperatureDescription.textContent = sammury
@@ -47,13 +53,23 @@ window.addEventListener('load', () => {
                         temperatureDegree.textContent = temp
                     }
 
-                })
 
-            })
+                })
+            }
+
+
+
+
+
+        }).catch((error) => {
+            console.log(error.status)
+            console.log(error.message);
 
         })
-    }
 
 
 
-})
+
+
+    })
+}
