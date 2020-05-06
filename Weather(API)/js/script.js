@@ -9,7 +9,9 @@ let degreeSpan = document.querySelector('.temperature__degreeSection span')
 
 
 
+
 if (navigator.geolocation) {
+
     navigator.geolocation.getCurrentPosition(position => {
 
         console.log(position);
@@ -18,7 +20,7 @@ if (navigator.geolocation) {
         lat = position.coords.latitude
         const api = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&appid=40f620c92e459b58039cbcfc3531380b`;
 
-        fetch(api).then(Response => {
+        fetch(api ).then(Response => {
             return Response.json()
         }).then(data => {
 
