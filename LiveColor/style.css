@@ -48,15 +48,15 @@ svg {
   position: absolute;
   bottom: 0%;
   background: rgb(255, 255, 255);
-  /* opacity: 0; */
+  opacity: 0;
   padding: 1rem;
   width: 80%;
   border-top-right-radius: 1rem;
-  /* pointer-events: none; */
+  pointer-events: none;
   border-top-left-radius: 1rem;
   /* We are adding an adjustemnt class */
-  /* transform: translateY(100px); */
-  transition: all 0.5s ease-in-out;
+  transform: translateY(220px);
+  transition: all 0.5s ease;
 }
 
 .sliders.active {
@@ -72,7 +72,7 @@ svg {
   top: 0;
   right: 0;
   padding: 0.5rem;
-  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
   border: none;
   background: rgb(73, 73, 73);
