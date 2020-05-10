@@ -356,6 +356,7 @@ body.hide {
   .nav-links {
     font-size: 2rem;
     text-align: center;
+    margin-top: 50px;
   }
   .contact h2 {
     font-size: 3rem;
@@ -365,5 +366,8 @@ body.hide {
     font-size: 1.2rem;
     padding: 2rem;
     text-align: center;
+  }
+  .cursor {
+    display: none;
   }
 }
