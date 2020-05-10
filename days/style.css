@@ -343,6 +343,9 @@ body.hide {
   .fashion-text p {
     margin-bottom: 5rem;
     padding: 0;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
   }
   .fastion-text h1 {
     margin: 2rem 0rem;
@@ -369,5 +372,14 @@ body.hide {
   }
   .cursor {
     display: none;
+  }
+
+  .reveal-img,
+  .reveal-text {
+    display: none;
+  }
+
+  .fashion-img {
+    transform: none;
   }
 }
